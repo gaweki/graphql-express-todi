@@ -26,5 +26,5 @@ app.use('/graphql', graphqlHTTP({
 //Graphql Playground route
 app.get("/playground", expressPlayground({ endpoint: "/graphql" }));
 
-app.listen(port);
+app.listen(process.env.PORT || port);
 console.log(`GraphQL Server Running at localhost:${port}`);
